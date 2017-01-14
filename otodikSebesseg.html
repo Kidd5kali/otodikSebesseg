@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by Kidd5kali (http://jsbin.com/nosatol/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+    <title>Ötödik sebesség</title>
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/auto.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+<style id="jsbin-css">
+.buttons {
+  padding: 0em 0.75em 0em 0.1em ;
+  opacity: 0.9;
+  width: 10em;
+  color: black;
+  font-size: 30px;
+  }
+
+.cimsor {
+    display: inline-flex;
+    position: fixed; width: 100%;
+    font-family: 'Yatra One', cursive;
+    }
+
+.lista {
+    text-align: left;
+    padding: 0em 0.75em 0em 0.1em;
+    }
+
+ul {
+    list-style: none;
+    }
+
+.history {
+    background-color: cornsilk;
+    text-align: left;
+    width: inherit;
+    }
+
+.search {
+    background-color: burlywood;
+    width: inherit;
+    }
+
+.contact {
+    background-color: blanchedalmond;
+    width: inherit;
+    }
+
+.intro {
+    background-color: wheat;
+    width: inherit;
+   }
+img {
+    width: 50%;
+    }
+
+#car1 {
+    margin-top: 66px;
+}
+
+body {
+    background-image: url(https://ketuba.files.wordpress.com/2011/06/egret.jpg)
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+</style>
+</head>
+<script type="text/javascript" src="Scripts/auto.js"></script>
+<body>
+    <div class="cimsor">
+        <div class="history">
+            <h1 class="buttons">Történet</h1>
+            <!--<ul class="lista">
+                <a href="x"><li>első</li></a>
+                <a href="x"><li>második</li></a>
+                <a href="x"><li>harmadik</li></a>
+                <a href="x"><li>negyedik</li></a>
+                <a href="x"><li>ötödik</li></a>
+            </ul>-->
+        </div>
+        <div class="search">
+            <h1 class="buttons">Autókereső</h1>
+            <ul class="lista">
+                <a href="x"><li>első</li></a>
+                <a href="x"><li>második</li></a>
+                <a href="x"><li>harmadik</li></a>
+                <a href="x"><li>negyedik</li></a>
+                <a href="x"><li>ötödik</li></a>
+                <a href="x"><li>hatodik</li></a>
+                <a href="x"><li>hetedik</li></a>
+                <a href="x"><li>nyolcadik</li></a>
+            </ul>
+        </div>
+        <div class="contact">
+            <h1 class="buttons">Kapcsolat</h1>
+         <!--<ul class="lista">
+                <a href="x"><li>színes</li></a>
+                <a href="x"><li>szélesvásznú</li></a>
+            </ul>-->
+        </div>
+        <div class="intro">
+            <h1 class="buttons">Bemutatkozás</h1>
+            <!--<ul class="lista">
+                <a href="x"><li>Tomi</li></a>
+                <a href="x"><li>Pali</li></a>
+                <a href="x"><li>Máté</li></a>
+                <a href="x"><li>Kristóf</li></a>
+                <a href="x"><li>Kálmán</li></a>
+            </ul>-->
+        </div>
+    </div>
+    <br />
+    <div class="cars">
+        <img style="position:relative" id="car1" src="http://i.imgur.com/PXzO5TJ.jpg" alt="old car" />
+        <img style="position:relative" id="car2" src="http://i.imgur.com/RJYfe4v.jpg" alt="new car" />
+        <img style="position:relative" id="car3" src="http://i.imgur.com/E1vnhk4.jpg" alt="old car" />
+        <img style="position:relative" id="car4" src="http://i.imgur.com/sRWpGfQ.jpg" alt="tesla" />
+        <img style="position:relative" id="car5" src="http://i.imgur.com/cJrZUQT.jpg" alt="citroen" />
+    </div>
+    <script id="jsbin-javascript">
+$(document).ready(function () {
+    $('.history').mouseenter(function () {
+        $('.history').fadeTo('slow', 0.5);
+    });
+    $('.history').mouseleave(function () {
+        $('.history').fadeTo('fast', 1);
+    });
+    $('.search').mouseenter(function () {
+        $('.search').fadeTo('slow', 0.5);
+    });
+    $('.search').mouseleave(function () {
+        $('.search').fadeTo('fast', 1);
+    });
+    $('.contact').mouseenter(function () {
+        $('.contact').fadeTo('slow', 0.5);
+    });
+    $('.contact').mouseleave(function () {
+        $('.contact').fadeTo('fast', 1);
+    });
+    $('.intro').mouseenter(function () {
+        $('.intro').fadeTo('slow', 0.5);
+    });
+    $('.intro').mouseleave(function () {
+        $('.intro').fadeTo('fast', 1);
+    });
+    $('#car1').click(function () {
+        var div = $("#car1");
+        div.animate({ height: '600px', opacity: '0.9' }, "slow");
+        div.animate({ width: '600px', opacity: '0.7' }, "slow");
+        div.animate({ height: '295px', opacity: '0.5' }, "slow");
+        div.animate({ width: '299px', opacity: '0.4' }, "slow");
+        div.animate({ top: "208px" });
+    });
+    $('#car2').click(function () {
+        var div = $("#car2");
+        div.animate({ height: '600px', opacity: '0.9' }, "slow");
+        div.animate({ width: '600px', opacity: '0.7' }, "slow");
+        div.animate({ height: '295px', opacity: '0.5' }, "slow");
+        div.animate({ width: '299px', opacity: '0.4' }, "slow");
+        div.animate({ top: "208px" });
+    });
+    $('#car3').click(function () {
+        var div = $("#car3");
+        div.animate({ height: '600px', opacity: '0.9' }, "slow");
+        div.animate({ width: '600px', opacity: '0.7' }, "slow");
+        div.animate({ height: '295px', opacity: '0.5' }, "slow");
+        div.animate({ width: '299px', opacity: '0.4' }, "slow");
+        div.animate({ top: "208px" });
+    });
+    $('#car4').click(function () {
+        var div = $("#car4");
+        div.animate({ height: '600px', opacity: '0.9' }, "slow");
+        div.animate({ width: '600px', opacity: '0.7' }, "slow");
+        div.animate({ height: '295px', opacity: '0.5' }, "slow");
+        div.animate({ width: '299px', opacity: '0.4' }, "slow");
+        div.animate({ top: "208px" });
+    });
+    $('#car5').click(function () {
+        var div = $("#car5");
+        div.animate({ height: '600px', opacity: '0.9' }, "slow");
+        div.animate({ width: '600px', opacity: '0.7' }, "slow");
+        div.animate({ height: '295px', opacity: '0.5' }, "slow");
+        div.animate({ width: '299px', opacity: '0.4' }, "slow");
+        div.animate({ top: "208px"})
+    });
+   });
+function main() {
+    $('.cimsor').hide();
+    $('.cimsor').fadeIn(1000);
+
+    $('.lista').hide();
+
+    $('.buttons').on('click', function () {
+        $(this).next().slideToggle(400);
+        $(this).toggleClass('active');
+    });
+}
+
+$(document).ready(main);
+
+</script>
+</body>
+</html>
